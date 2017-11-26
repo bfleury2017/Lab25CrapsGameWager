@@ -38,8 +38,8 @@ namespace Lab25CrapsGameWager
         }
 
         public void Play() {
-            int point = 0;
-            int sumDice = RollDice();
+            var point = 0;
+            var sumDice = RollDice();
 
             switch ((DiceNames) sumDice)
             {
@@ -91,10 +91,10 @@ namespace Lab25CrapsGameWager
         }
 
         public int RollDice(){
-            int die1 = randomNumbers.Next(1, 7);
-            int die2 = randomNumbers.Next(1, 7);
+            var die1 = randomNumbers.Next(1, 7);
+            var die2 = randomNumbers.Next(1, 7);
 
-            int sum = die1 + die2;
+            var sum = die1 + die2;
             Console.WriteLine($"Player rolled {die1} + {die2} = {sum}");
             return sum;
         }
