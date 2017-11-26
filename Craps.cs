@@ -36,8 +36,11 @@ namespace Lab25CrapsGameWager
 
             while (wager <= 0 || wager > balance)
             {
+                if (wager == -1) break;
+
                 Console.Write($"{wager} is invalid, must be greater than 0 and cannot exceed {balance:C}: ");
                 wager = decimal.Parse(Console.ReadLine());
+                if (wager == -1) break;
             }
             return wager;
         }
